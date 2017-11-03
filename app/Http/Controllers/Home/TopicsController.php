@@ -35,11 +35,17 @@ class TopicsController extends Controller
 
 
     /**
+     * @param Request $request
      * @param Topic $topic
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
      */
-    public function show(Topic $topic)
+    public function show(Request $request,Topic $topic)
     {
+        // URL 矫正
+        if ( ! empty($topic->slug) && $topic->slug != $request->slug) {
+            return redirect($topic->link(), 301);
+        }
+
         return view('topics.show', compact('topic'));
     }
 
@@ -66,7 +72,7 @@ class TopicsController extends Controller
         $topic->body = clean($topic->body, 'user_topic_body');
         $topic->save();
 
-        return redirect()->route('topics.show', $topic->id)->with('success', '新建话题成功.');
+        return redirect()->to($topic->link())->with('success', '新建话题成功.');
     }
 
 
@@ -94,7 +100,7 @@ class TopicsController extends Controller
         $this->authorize('update', $topic);
         $topic->update($request->all());
 
-        return redirect()->route('topics.show', $topic->id)->with('success', '更新成功.');
+        return redirect()->to($topic->link())->with('success', '更新成功.');
     }
 
 
