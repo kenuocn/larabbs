@@ -65,7 +65,7 @@ class TopicsController extends Controller
         $topic->user_id = Auth::id();
         $topic->save();
 
-        return redirect()->route('topics.show', $topic->id)->with('message', '新建话题成功.');
+        return redirect()->route('topics.show', $topic->id)->with('success', '新建话题成功.');
     }
 
 
@@ -91,7 +91,7 @@ class TopicsController extends Controller
         $this->authorize('update', $topic);
         $topic->update($request->all());
 
-        return redirect()->route('topics.show', $topic->id)->with('message', 'Updated successfully.');
+        return redirect()->route('topics.show', $topic->id)->with('success', '更新成功.');
     }
 
 
@@ -105,10 +105,15 @@ class TopicsController extends Controller
 
         $topic->delete();
 
-        return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
+        return redirect()->route('topics.index')->with('success', '删除成功.');
     }
 
-
+    /**
+     * 上传话题图片
+     * @param Request $request
+     * @param ImageUploadHandler $uploader
+     * @return array
+     */
     public function uploadImage(Request $request, ImageUploadHandler $uploader)
     {
         // 初始化返回数据，默认是失败的
@@ -128,6 +133,7 @@ class TopicsController extends Controller
                 $data['file_path'] = $result['path'];
             }
         }
+
         return $data;
     }
 }
