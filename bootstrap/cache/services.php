@@ -29,11 +29,12 @@
     25 => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
     26 => 'Barryvdh\\Debugbar\\ServiceProvider',
     27 => 'HieuLe\\Active\\ActiveServiceProvider',
-    28 => 'App\\Providers\\AppServiceProvider',
-    29 => 'App\\Providers\\AuthServiceProvider',
-    30 => 'App\\Providers\\EventServiceProvider',
-    31 => 'App\\Providers\\RouteServiceProvider',
-    32 => 'Jormin\\Geetest\\GeetestServiceProvider',
+    28 => 'Mews\\Purifier\\PurifierServiceProvider',
+    29 => 'App\\Providers\\AppServiceProvider',
+    30 => 'App\\Providers\\AuthServiceProvider',
+    31 => 'App\\Providers\\EventServiceProvider',
+    32 => 'App\\Providers\\RouteServiceProvider',
+    33 => 'Jormin\\Geetest\\GeetestServiceProvider',
   ),
   'eager' => 
   array (
@@ -157,6 +158,7 @@
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
     'Overtrue\\LaravelLang\\Commands\\Publish' => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
+    'purifier' => 'Mews\\Purifier\\PurifierServiceProvider',
   ),
   'when' => 
   array (
@@ -200,6 +202,9 @@
     array (
     ),
     'Overtrue\\LaravelLang\\TranslationServiceProvider' => 
+    array (
+    ),
+    'Mews\\Purifier\\PurifierServiceProvider' => 
     array (
     ),
   ),
