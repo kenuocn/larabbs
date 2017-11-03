@@ -42,4 +42,15 @@
       'Debugbar' => 'Barryvdh\\Debugbar\\Facade',
     ),
   ),
+  'hieu-le/active' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'HieuLe\\Active\\ActiveServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Active' => 'HieuLe\\Active\\Facades\\Active',
+    ),
+  ),
 );

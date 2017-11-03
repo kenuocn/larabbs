@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Home;
 
 use App\Models\Topic;
 use Illuminate\Http\Request;
@@ -94,6 +94,7 @@ class TopicsController extends Controller
     public function destroy(Topic $topic)
     {
         $this->authorize('destroy', $topic);
+
         $topic->delete();
 
         return redirect()->route('topics.index')->with('message', 'Deleted successfully.');
