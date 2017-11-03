@@ -10,11 +10,18 @@ use App\Notifications\TopicReplied;
 
 class ReplyObserver
 {
+
+    /**
+     * @param Reply $reply
+     */
     public function creating(Reply $reply)
     {
         $reply->content = clean($reply->content, 'user_topic_body');
     }
 
+    /**
+     * @param Reply $reply
+     */
     public function created(Reply $reply)
     {
         $topic = $reply->topic;
@@ -26,8 +33,11 @@ class ReplyObserver
         }
     }
 
-    public function updating(Reply $reply)
+    /**
+     * @param Reply $reply
+     */
+    public function deleted(Reply $reply)
     {
-        //
+        $reply->topic->decrement('reply_count', 1);
     }
 }

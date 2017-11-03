@@ -13,8 +13,13 @@ class ReplyPolicy extends Policy
         return true;
     }
 
+    /**
+     * @param User $user
+     * @param Reply $reply
+     * @return bool
+     */
     public function destroy(User $user, Reply $reply)
     {
-        return true;
+        return $user->isAuthorOf($reply) || $user->isAuthorOf($reply->topic);
     }
 }
