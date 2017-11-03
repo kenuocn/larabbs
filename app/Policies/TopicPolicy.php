@@ -7,14 +7,23 @@ use App\Models\Topic;
 
 class TopicPolicy extends Policy
 {
+    /**
+     * @param User $user
+     * @param Topic $topic
+     * @return bool
+     */
     public function update(User $user, Topic $topic)
     {
-         return $topic->user_id == $user->id;
-        return true;
+        return $user->isAuthorOf($topic);
     }
 
+    /**
+     * @param User $user
+     * @param Topic $topic
+     * @return bool
+     */
     public function destroy(User $user, Topic $topic)
     {
-        return true;
+        return $user->isAuthorOf($topic);
     }
 }
