@@ -64,4 +64,15 @@
       'Purifier' => 'Mews\\Purifier\\Facades\\Purifier',
     ),
   ),
+  'laravel/horizon' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Horizon\\HorizonServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Horizon' => 'Laravel\\Horizon\\Horizon',
+    ),
+  ),
 );
