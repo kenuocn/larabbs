@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-//    use Traits\LastActivedAtHelper;
+    use Traits\LastActivedAtHelper;
     use Traits\ActiveUserHelper;
 //    use HasRoles;
     use Notifiable {
