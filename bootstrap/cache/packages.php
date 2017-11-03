@@ -75,4 +75,11 @@
       'Horizon' => 'Laravel\\Horizon\\Horizon',
     ),
   ),
+  'summerblue/generator' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Summerblue\\Generator\\GeneratorsServiceProvider',
+    ),
+  ),
 );

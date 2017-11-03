@@ -71,7 +71,6 @@ class TopicsController extends Controller
         $topic->user_id = Auth::id();
         $topic->body = clean($topic->body, 'user_topic_body');
         $topic->save();
-
         return redirect()->to($topic->link())->with('success', '新建话题成功.');
     }
 

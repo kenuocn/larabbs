@@ -31,3 +31,5 @@ Route::group(['namespace' => 'Home'], function (){
 
 
 Auth::routes();
+
+Route::resource('replies', 'RepliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
