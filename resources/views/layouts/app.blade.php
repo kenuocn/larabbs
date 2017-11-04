@@ -11,8 +11,10 @@
     <title>@yield('title', 'LaraBBS')</title>
     <meta name="description" content="@yield('description', 'LaraBBS')" />
 
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <meta http-equiv="x-pjax-version" content="{{ mix('/css/app.css') }}">
     @yield('styles')
 </head>
 
@@ -21,7 +23,7 @@
 
     @include('layouts._header')
 
-    <div class="container">
+    <div class="container" id="pjax-container">
 
         @include('layouts._message')
         @yield('content')
@@ -37,6 +39,15 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
 @yield('scripts')
+<script>
+    $(document).pjax('a', '#pjax-container');
+    $(document).on("pjax:timeout", function(event) {
+        // 阻止超时导致链接跳转事件发生
+        event.preventDefault()
+    });
+</script>
 </body>
 </html>
