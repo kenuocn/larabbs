@@ -1,36 +1,4 @@
 <?php return array (
-  'fideloper/proxy' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    ),
-  ),
-  'laravel/tinker' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    ),
-  ),
-  'intervention/image' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Intervention\\Image\\ImageServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Image' => 'Intervention\\Image\\Facades\\Image',
-    ),
-  ),
-  'overtrue/laravel-lang' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
-    ),
-  ),
   'barryvdh/laravel-debugbar' => 
   array (
     'providers' => 
@@ -40,6 +8,13 @@
     'aliases' => 
     array (
       'Debugbar' => 'Barryvdh\\Debugbar\\Facade',
+    ),
+  ),
+  'fideloper/proxy' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     ),
   ),
   'hieu-le/active' => 
@@ -53,15 +28,15 @@
       'Active' => 'HieuLe\\Active\\Facades\\Active',
     ),
   ),
-  'mews/purifier' => 
+  'intervention/image' => 
   array (
     'providers' => 
     array (
-      0 => 'Mews\\Purifier\\PurifierServiceProvider',
+      0 => 'Intervention\\Image\\ImageServiceProvider',
     ),
     'aliases' => 
     array (
-      'Purifier' => 'Mews\\Purifier\\Facades\\Purifier',
+      'Image' => 'Intervention\\Image\\Facades\\Image',
     ),
   ),
   'laravel/horizon' => 
@@ -73,6 +48,31 @@
     'aliases' => 
     array (
       'Horizon' => 'Laravel\\Horizon\\Horizon',
+    ),
+  ),
+  'laravel/tinker' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    ),
+  ),
+  'mews/purifier' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Mews\\Purifier\\PurifierServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Purifier' => 'Mews\\Purifier\\Facades\\Purifier',
+    ),
+  ),
+  'overtrue/laravel-lang' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
     ),
   ),
   'summerblue/generator' => 

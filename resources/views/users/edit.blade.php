@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="panel panel-default col-md-10 col-md-offset-1">
-            @include('common.error')
+            @include('tiicle.resources.views.home.common.error')
             <div class="panel-heading">
                 <h4>
                     <i class="glyphicon glyphicon-edit"></i> 编辑个人资料

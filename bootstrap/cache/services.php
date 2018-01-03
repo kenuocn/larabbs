@@ -23,14 +23,14 @@
     19 => 'Illuminate\\Translation\\TranslationServiceProvider',
     20 => 'Illuminate\\Validation\\ValidationServiceProvider',
     21 => 'Illuminate\\View\\ViewServiceProvider',
-    22 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    23 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    24 => 'Intervention\\Image\\ImageServiceProvider',
-    25 => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
-    26 => 'Barryvdh\\Debugbar\\ServiceProvider',
-    27 => 'HieuLe\\Active\\ActiveServiceProvider',
+    22 => 'Barryvdh\\Debugbar\\ServiceProvider',
+    23 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
+    24 => 'HieuLe\\Active\\ActiveServiceProvider',
+    25 => 'Intervention\\Image\\ImageServiceProvider',
+    26 => 'Laravel\\Horizon\\HorizonServiceProvider',
+    27 => 'Laravel\\Tinker\\TinkerServiceProvider',
     28 => 'Mews\\Purifier\\PurifierServiceProvider',
-    29 => 'Laravel\\Horizon\\HorizonServiceProvider',
+    29 => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
     30 => 'Summerblue\\Generator\\GeneratorsServiceProvider',
     31 => 'App\\Providers\\AppServiceProvider',
     32 => 'App\\Providers\\AuthServiceProvider',
@@ -50,10 +50,10 @@
     7 => 'Illuminate\\Pagination\\PaginationServiceProvider',
     8 => 'Illuminate\\Session\\SessionServiceProvider',
     9 => 'Illuminate\\View\\ViewServiceProvider',
-    10 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    11 => 'Intervention\\Image\\ImageServiceProvider',
-    12 => 'Barryvdh\\Debugbar\\ServiceProvider',
-    13 => 'HieuLe\\Active\\ActiveServiceProvider',
+    10 => 'Barryvdh\\Debugbar\\ServiceProvider',
+    11 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
+    12 => 'HieuLe\\Active\\ActiveServiceProvider',
+    13 => 'Intervention\\Image\\ImageServiceProvider',
     14 => 'Laravel\\Horizon\\HorizonServiceProvider',
     15 => 'Summerblue\\Generator\\GeneratorsServiceProvider',
     16 => 'App\\Providers\\AppServiceProvider',
@@ -161,8 +161,8 @@
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
-    'Overtrue\\LaravelLang\\Commands\\Publish' => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
     'purifier' => 'Mews\\Purifier\\PurifierServiceProvider',
+    'Overtrue\\LaravelLang\\Commands\\Publish' => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
   ),
   'when' => 
   array (
@@ -205,10 +205,10 @@
     'Laravel\\Tinker\\TinkerServiceProvider' => 
     array (
     ),
-    'Overtrue\\LaravelLang\\TranslationServiceProvider' => 
+    'Mews\\Purifier\\PurifierServiceProvider' => 
     array (
     ),
-    'Mews\\Purifier\\PurifierServiceProvider' => 
+    'Overtrue\\LaravelLang\\TranslationServiceProvider' => 
     array (
     ),
   ),

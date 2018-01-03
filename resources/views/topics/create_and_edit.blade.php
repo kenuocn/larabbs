@@ -20,8 +20,6 @@
 
                 <hr>
 
-                @include('common.error')
-
                 @if($topic->id)
                     <form action="{{ route('topics.update', $topic->id) }}" method="POST" accept-charset="UTF-8">
                         <input type="hidden" name="_method" value="PUT">
